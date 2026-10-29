@@ -1,0 +1,56 @@
+// More about schema in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Profile {
+  name     String   @id
+  description String
+  links    Link[]
+  skills   Skill[]
+  experiences Experience[]
+  projects Project[]
+}
+
+model Link {
+  id        Int     @id @default(autoincrement())
+  url       String
+  name      String
+  profile   Profile @relation(fields: [profileName], references: [name], onDelete: Cascade)
+  profileName String
+}
+
+model Skill {
+  id        Int     @id @default(autoincrement())
+  name      String  @unique
+  // Implicit many-to-many relationship with Profile
+  profiles  Profile[]
+}
+
+model Experience {
+  id        Int     @id @default(autoincrement())
+  title     String
+  company   String
+  startDate DateTime
+  endDate   DateTime? // Ongoing experiences if null
+  achievements String?
+  // One-to-many relationship with Profile
+  profile   Profile @relation(fields: [profileName], references: [name], onDelete: Cascade)
+  profileName String
+}
+
+model Project {
+  id        Int     @id @default(autoincrement())
+  name      String
+  description String
+  url       String?
+  // One-to-many relationship with Profile
+  profile   Profile @relation(fields: [profileName], references: [name], onDelete: Cascade)
+  profileName String
+}

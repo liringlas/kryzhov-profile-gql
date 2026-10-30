@@ -2,6 +2,8 @@
 
 Цифровая визитка: GraphQL API на NestJS, Prisma и PostgreSQL. Отдаёт мой профиль, навыки, опыт работы и проекты.
 
+Развёрнутая версия с Apollo Sandbox: https://rigelirin.com/graphql
+
 ## Запуск в Docker
 
 Нужны Git и Docker с Docker Compose.

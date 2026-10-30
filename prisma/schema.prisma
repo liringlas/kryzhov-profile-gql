@@ -39,10 +39,18 @@ model Experience {
   company   String
   startDate DateTime
   endDate   DateTime? // Ongoing experiences if null
-  achievements String?
+  achievements Achievement[]
   // One-to-many relationship with Profile
   profile   Profile @relation(fields: [profileName], references: [name], onDelete: Cascade)
   profileName String
+}
+
+model Achievement {
+  id        Int     @id @default(autoincrement())
+  description String
+  // One-to-many relationship with Experience
+  experience   Experience @relation(fields: [experienceId], references: [id], onDelete: Cascade)
+  experienceId Int
 }
 
 model Project {

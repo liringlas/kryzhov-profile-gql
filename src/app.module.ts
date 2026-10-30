@@ -8,6 +8,36 @@ import { ProfileModule } from './profile/profile.module.ts';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
+// Preloaded into Apollo Sandbox
+const SANDBOX_QUERY = `query {
+  profile {
+    name
+    description
+    links {
+      name
+      url
+    }
+    skills {
+      name
+    }
+    experiences {
+      company
+      title
+      startDate
+      endDate
+      achievements {
+        description
+      }
+    }
+    projects {
+      name
+      description
+      url
+    }
+  }
+}
+`;
+
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true, expandVariables: true }),
@@ -18,7 +48,9 @@ const isProduction = process.env.NODE_ENV === 'production';
       sortSchema: true,
       // Apollo Sandbox instead of GraphiQL, which Nest enables by default
       graphiql: false,
-      plugins: [ApolloServerPluginLandingPageLocalDefault()],
+      plugins: [
+        ApolloServerPluginLandingPageLocalDefault({ document: SANDBOX_QUERY }),
+      ],
       // Apollo disables introspection when NODE_ENV=production; Sandbox needs it
       introspection: true,
     }),

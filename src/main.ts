@@ -5,6 +5,9 @@ const DEFAULT_PORT = 3000;
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  // Runs onModuleDestroy (Prisma $disconnect) on SIGTERM from docker stop
+  app.enableShutdownHooks();
+  // Start listening on the port
   await app.listen(process.env.PORT ?? DEFAULT_PORT);
 }
 await bootstrap();

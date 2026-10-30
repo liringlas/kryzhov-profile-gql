@@ -1,0 +1,12 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Profile {
+  description: String!
+  name: String!
+}
+
+type Query {
+  profile(name: String! = "Konstantin Ryzhov"): Profile
+}

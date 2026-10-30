@@ -1,0 +1,147 @@
+{
+  "name": "Константин Рыжов",
+  "description": "Senior Full-Stack Product Engineer (TypeScript, React, Node.js), 12+ лет в разработке веб-продуктов. Первый инженер dRPC и основной разработчик его клиентского веб-приложения на протяжении 4 лет. Фичи end-to-end, от модели данных до интерфейса: аутентификация, платежи, команды, аналитика. Из недавней работы с AI: RAG-ассистент по документации и платежи x402 для AI-агентов. Алматы, Казахстан; работаю удалённо с 2019 года.",
+  "links": [
+    { "name": "GitHub", "url": "https://github.com/liringlas" },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/konstantin-ryzhov"
+    },
+    { "name": "Сайт", "url": "https://rigelirin.com" },
+    {
+      "name": "Резюме (PDF, на английском)",
+      "url": "https://rigelirin.com/Konstantin_Ryzhov_Resume.pdf"
+    }
+  ],
+  "skills": [
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "SQL",
+    "PostgreSQL",
+    "GraphQL",
+    "ClickHouse",
+    "NestJS",
+    "Prisma",
+    "tRPC",
+    "Python",
+    "React",
+    "Next.js",
+    "NextAuth.js",
+    "Redis",
+    "RabbitMQ",
+    "HTML/CSS",
+    "TanStack Query",
+    "Zustand",
+    "Storybook",
+    "Nivo",
+    "Zod",
+    "RAG",
+    "pgvector",
+    "Claude Code",
+    "wagmi",
+    "viem",
+    "WalletConnect",
+    "Playwright",
+    "Vitest",
+    "Sentry",
+    "Docker"
+  ],
+  "experiences": [
+    {
+      "title": "Senior Full-Stack Developer",
+      "company": "dRPC",
+      "startDate": "2022-08-01",
+      "endDate": "2026-10-01",
+      "achievements": [
+        "Блокчейн-RPC-инфраструктура. Первый инженер в команде, 4 года прямой работы с CTO и CEO. Фичи end-to-end, от модели данных до интерфейса: аутентификация, платежи, команды, аналитика.",
+        "Запуск клиентского веб-приложения с нуля: выбор стека (TypeScript, React, Next.js, tRPC, PostgreSQL/Prisma), доступ к аккаунту, управление API-ключами, платежи и аналитика использования.",
+        "Вход через кошелёк и криптопополнения: wagmi и Sign-In with Ethereum (EIP-4361); идентификатор платежа в calldata ERC-20-транзакции.",
+        "Воркер email-уведомлений на RabbitMQ: отдельный Node.js-консьюмер, который превращает события Go-прокси (баланс, тариф, команда, аддоны) в письма клиентам; очереди, fan-out exchange для участников команды, backpressure через prefetch, дедупликация сообщений.",
+        "Командный workspace: UI с учётом ролей и авторизация на бэкенде через tRPC middleware. Миграция существующих пользователей в личные команды без простоя веб-приложения.",
+        "Вход по email/паролю и через Google рядом со входом через кошелёк; защита от перебора, сравнение за постоянное время, аудит-лог, тесты на Vitest и end-to-end с помощью Claude.",
+        "Аналитика использования v1 и v2: общие фильтры, drill-down-таблицы и экспорт в CSV поверх 10+ эндпоинтов на ClickHouse. Исправление out-of-memory в запросах ClickHouse, серверный кэш тяжёлых агрегатов для крупнейших аккаунтов.",
+        "Оплата картой через Paddle: разовые пополнения и автоматическое ежемесячное пополнение баланса команды.",
+        "Обновление wagmi и viem с v1 до v2 на работающем платёжном потоке; публичный faucet с 2 анти-сибил-проверками: proof-of-work в браузере и скоринг Gitcoin Passport; в бэкенде faucet — получение токенов через Gitcoin Passport.",
+        "Foundation-дашборд целиком (UI, API, запросы к ClickHouse): блокчейн-фонды видят географию запросов к своим нодам.",
+        "Платёжный эндпоинт x402, через который AI-агенты платят за RPC-доступ без аккаунта: требования оплаты HTTP 402, проверка подписи кошелька, передача в биллинг для расчёта on-chain. Аудит реализации по спецификации x402 v2.",
+        "Автоматизация постоплатного инвойсинга для enterprise-клиентов вместо ручного процесса: админ-консоль проверки и отправки, генерация PDF на сервере, рассылка на настраиваемых получателей.",
+        "Публичный Key-Management REST API: bearer-аутентификация, типизированные доменные ошибки, спецификация OpenAPI; клиенты управляют API-ключами и тегами программно.",
+        "Прототип RAG-ассистента по документации для developer hub: ответы с цитатами, OpenAI Agents SDK и PostgreSQL/pgvector, SSE-стриминг, переписывание запросов в диалоге, многоуровневые guardrails и eval-харнесс, по результатам которого решалось, какие изменения поиска идут в прод."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Prometheus Research, an IQVIA business",
+      "startDate": "2019-10-01",
+      "endDate": "2022-07-01",
+      "achievements": [
+        "Full-stack-разработка платформ для медицинских исследований CureCloud и Immune Atlas (mmrfcurecloud.org).",
+        "Фичи на React и Python, в том числе сложные формы опросов и сбора данных для клинических исследований.",
+        "Участие в проектировании базы данных; фронтенд конструктора медицинских когорт для ASH Research Collaborative; внедрение регрессионного тестирования на Playwright."
+      ]
+    },
+    {
+      "title": "UI Developer",
+      "company": "Альфа-Банк",
+      "startDate": "2018-10-01",
+      "endDate": "2019-09-01",
+      "achievements": [
+        "Внутренние маркетинговые инструменты банка: конструкторы email-шаблонов, лендингов и HTML5/GIF-баннеров.",
+        "Full-stack CMS на MERN для портала цифрового дизайна."
+      ]
+    },
+    {
+      "title": "Frontend Developer",
+      "company": "BeKitzur",
+      "startDate": "2018-02-01",
+      "endDate": "2018-08-01",
+      "achievements": [
+        "Клиентские веб-приложения: верификация личности через Jumio, платежи Braintree, визуализация данных на Highcharts."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "EPAM Systems",
+      "startDate": "2016-06-01",
+      "endDate": "2018-02-01",
+      "achievements": [
+        "Аналитическое приложение на React/TypeScript для заказчика; работа над внутренним порталом EPAM.",
+        "Менторство коллеги на внутреннем курсе по React."
+      ]
+    },
+    {
+      "title": "Frontend Developer",
+      "company": "RHOS",
+      "startDate": "2015-09-01",
+      "endDate": "2016-02-01",
+      "achievements": ["Веб-приложение и вёрстка для нидерландского стартапа."]
+    },
+    {
+      "title": "Junior Frontend Developer",
+      "company": "Hoster.KZ",
+      "startDate": "2014-02-01",
+      "endDate": "2015-05-01",
+      "achievements": [
+        "HTML5-шаблоны и сайты клиентов в местном digital-агентстве."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "learn-sql.dev",
+      "description": "Платформа для изучения SQL, которую я делаю один: редактор с живыми запросами к PostgreSQL, бесплатная энциклопедия SQL и обучающая игра.",
+      "url": "https://learn-sql.dev"
+    },
+    {
+      "name": "dRPC Learn",
+      "description": "Прототип developer hub для dRPC: живая RPC-песочница и AI-ассистент, который отвечает по документации dRPC с цитатами. RAG на OpenAI Agents SDK и PostgreSQL/pgvector, SSE-стриминг, переписывание запросов в диалоге, многоуровневые guardrails и eval-харнесс, по результатам которого решалось, какие изменения поиска идут в прод.",
+      "url": "https://drpc.rigelirin.com"
+    },
+    {
+      "name": "kryzhov-profile-gql",
+      "description": "Эта цифровая визитка: NestJS, GraphQL, Prisma, PostgreSQL, Docker",
+      "url": "https://github.com/liringlas/kryzhov-profile-gql"
+    }
+  ]
+}

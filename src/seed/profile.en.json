@@ -1,0 +1,147 @@
+{
+  "name": "Konstantin Ryzhov",
+  "description": "Senior Full-Stack Product Engineer (TypeScript, React, Node.js) with 12+ years building web products. dRPC's first engineering hire and largest web app contributor over 4 years. Owned features end to end across authentication, payments, teams and analytics, from data model to UI. Recent AI work: a RAG docs assistant and x402 payments for AI agents. Based in Almaty, Kazakhstan; working remotely since 2019.",
+  "links": [
+    { "name": "GitHub", "url": "https://github.com/liringlas" },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/konstantin-ryzhov"
+    },
+    { "name": "Website", "url": "https://rigelirin.com" },
+    {
+      "name": "Resume (PDF)",
+      "url": "https://rigelirin.com/Konstantin_Ryzhov_Resume.pdf"
+    }
+  ],
+  "skills": [
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "SQL",
+    "PostgreSQL",
+    "GraphQL",
+    "ClickHouse",
+    "NestJS",
+    "Prisma",
+    "tRPC",
+    "Python",
+    "React",
+    "Next.js",
+    "NextAuth.js",
+    "Redis",
+    "RabbitMQ",
+    "HTML/CSS",
+    "TanStack Query",
+    "Zustand",
+    "Storybook",
+    "Nivo",
+    "Zod",
+    "RAG",
+    "pgvector",
+    "Claude Code",
+    "wagmi",
+    "viem",
+    "WalletConnect",
+    "Playwright",
+    "Vitest",
+    "Sentry",
+    "Docker"
+  ],
+  "experiences": [
+    {
+      "title": "Senior Full-Stack Developer",
+      "company": "dRPC",
+      "startDate": "2022-08-01",
+      "endDate": "2026-10-01",
+      "achievements": [
+        "First engineering hire, working alongside the CTO and CEO, and the largest contributor to the customer web application over 4 years. dRPC is blockchain RPC infrastructure (drpc.org); its core RPC service handled ~120B requests a month across all chains in 2026.",
+        "Built and launched the customer-facing web application for dRPC's core RPC service from scratch. Selected the web stack (TypeScript, React, Next.js, tRPC and PostgreSQL/Prisma) and delivered account access, API-key management, payments and usage analytics.",
+        "Implemented wallet authentication and crypto top-ups using wagmi and Sign-In with Ethereum with one-time signing challenges. Embedded payment identifiers in ERC-20 transaction calldata so the billing backend could attribute transfers to the correct account.",
+        "Built the email notification worker on RabbitMQ: a standalone Node.js consumer that turns balance, tier, team and add-on events from the Go RPC proxy into customer emails, with its own queues, a fan-out exchange for team members, prefetch-based backpressure and message deduplication.",
+        "Enabled shared access to accounts and balances by introducing team workspaces, role-aware interfaces and backend authorization through tRPC middleware. Migrated existing users to personal teams with zero downtime, preserving working API keys without requiring customer action.",
+        "Added email/password and Google sign-in alongside wallet login, hardened authentication with brute-force protection, constant-time comparison, audit logging and tenant-scoped authorization fixes, with Vitest tests.",
+        "Rebuilt customer usage analytics with shared filters, drill-down tables and CSV export over 10+ ClickHouse-backed endpoints. Fixed out-of-memory failures in ClickHouse queries and added server-side caching for expensive aggregates on the largest accounts.",
+        "Expanded a crypto-only payment flow with Paddle card payments and recurring billing, enabling one-time top-ups and automatic monthly replenishment of team balances.",
+        "Upgraded wagmi and viem from v1 to v2 on the live payment flow and shipped the public faucet with 2 anti-sybil checks, browser proof-of-work and Gitcoin Passport scoring; built the Gitcoin Passport claim path in the faucet backend.",
+        "Built the Foundation analytics dashboard end to end, including the UI, API and ClickHouse queries, giving blockchain foundations visibility into the geographic distribution of requests to their nodes on dRPC.",
+        "Built the x402 payment endpoint that lets AI agents pay for RPC access without a human account: HTTP 402 payment requirements, wallet-signature verification and hand-off to the billing backend for on-chain settlement. Audited the implementation against the x402 v2 specification.",
+        "Automated post-paid enterprise invoicing with an admin review-and-send console, server-side PDF rendering and email delivery to configurable recipients, replacing a manual process.",
+        "Designed the public Key-Management REST API with bearer authentication, typed domain errors and an OpenAPI specification, so customers can manage API keys and tags programmatically.",
+        "Prototyped a RAG docs assistant for dRPC's developer hub that answers from the docs with citations: OpenAI Agents SDK and PostgreSQL/pgvector, SSE streaming, multi-turn query rewriting, layered guardrails and an eval harness that decided which retrieval changes shipped."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Prometheus Research, an IQVIA business",
+      "startDate": "2019-10-01",
+      "endDate": "2022-07-01",
+      "achievements": [
+        "Full-stack development of medical research platforms CureCloud and Immune Atlas (mmrfcurecloud.org).",
+        "Built React and Python features, including complex survey and data-collection forms for clinical research.",
+        "Contributed to database design decisions, built the frontend of a medical cohort builder for the ASH Research Collaborative, and introduced Playwright regression testing to the workflow."
+      ]
+    },
+    {
+      "title": "UI Developer",
+      "company": "Alfa-Bank",
+      "startDate": "2018-10-01",
+      "endDate": "2019-09-01",
+      "achievements": [
+        "Built the bank's internal marketing tools: builders for email templates, landing pages and HTML5/GIF banners.",
+        "Developed a full-stack MERN CMS for a digital design web portal."
+      ]
+    },
+    {
+      "title": "Frontend Developer",
+      "company": "BeKitzur",
+      "startDate": "2018-02-01",
+      "endDate": "2018-08-01",
+      "achievements": [
+        "Developed client web apps with Jumio identity verification, Braintree payments and Highcharts data visualizations."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "EPAM Systems",
+      "startDate": "2016-06-01",
+      "endDate": "2018-02-01",
+      "achievements": [
+        "Built a React/TypeScript analytics application for a customer and worked on the internal EPAM portal.",
+        "Mentored a colleague through an internal React course."
+      ]
+    },
+    {
+      "title": "Frontend Developer",
+      "company": "RHOS",
+      "startDate": "2015-09-01",
+      "endDate": "2016-02-01",
+      "achievements": ["Built the web app and layouts for a Dutch startup."]
+    },
+    {
+      "title": "Junior Frontend Developer",
+      "company": "Hoster.KZ",
+      "startDate": "2014-02-01",
+      "endDate": "2015-05-01",
+      "achievements": [
+        "Created HTML5 templates and customer websites at a local digital agency."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "learn-sql.dev",
+      "description": "Solo-built SQL learning platform: a live PostgreSQL query editor, a free SQL encyclopedia and a learning game.",
+      "url": "https://learn-sql.dev"
+    },
+    {
+      "name": "dRPC Learn",
+      "description": "Developer hub prototype for dRPC that pairs a live RPC playground with an AI assistant answering from dRPC's docs with citations. RAG on the OpenAI Agents SDK and PostgreSQL/pgvector with SSE streaming, multi-turn query rewriting and layered guardrails, plus an eval harness that decided which retrieval changes shipped.",
+      "url": "https://drpc.rigelirin.com"
+    },
+    {
+      "name": "kryzhov-profile-gql",
+      "description": "This digital business card: NestJS, GraphQL, Prisma, PostgreSQL, Docker",
+      "url": "https://github.com/liringlas/kryzhov-profile-gql"
+    }
+  ]
+}

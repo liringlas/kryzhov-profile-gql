@@ -4,11 +4,13 @@ FROM node:24-alpine AS build
 WORKDIR /app
 
 COPY package.json package-lock.json ./
+# postinstall runs prisma generate, which needs the schema and config
+COPY prisma7.config.ts ./
+COPY prisma ./prisma
 RUN --mount=type=cache,target=/root/.npm npm ci
 
 COPY . .
-RUN npx prisma generate \
- && npm run build \
+RUN npm run build \
  && npm prune --omit=dev
 
 FROM node:24-alpine

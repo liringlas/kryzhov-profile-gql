@@ -29,6 +29,6 @@ COPY --from=build /app/prisma ./prisma
 COPY --chmod=755 docker-entrypoint.sh ./
 
 USER node
-EXPOSE 3000
+EXPOSE 3100
 ENTRYPOINT ["./docker-entrypoint.sh"]
 CMD ["node", "dist/main.js"]

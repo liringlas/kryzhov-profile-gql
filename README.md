@@ -13,7 +13,7 @@ cp .env.example .env
 docker compose up --build
 ```
 
-При старте контейнер применяет миграции и заполняет базу из `src/seed/profile.json`. Apollo Sandbox: http://localhost:3000/graphql (порт задаёт `APP_PORT` в `.env`).
+При старте контейнер применяет миграции и заполняет базу из `src/seed/profile.json`. Apollo Sandbox: http://localhost:3100/graphql (порт задаёт `APP_PORT` в `.env`).
 
 ## Запуск приложения без Docker
 
